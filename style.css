@@ -1,0 +1,93 @@
+body {
+	font-size: 1.05em;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+h4 {
+	margin: 0px;
+	padding: 0px;
+}
+p {
+	text-align: center;
+}
+#container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 10px auto;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+#info {
+	width: 100%;
+}
+#formArea, #savedData {
+	width: 45%;
+	margin: 5px;
+	padding: 5px;
+}
+.noshowbaby {
+	display: none;
+}
+input, select {
+	margin: 5px;
+	font-size: 1.05em;
+	display: inline-block
+}
+
+label {
+	display:inline-block;
+	width: 200px;
+	padding: 10px;
+}
+section {
+	text-align: center;
+}
+section table {
+	margin: 0px auto;
+	width: auto;
+}
+section td, section th {
+	float: left;
+	width: 45%;
+	min-width: 200px;
+}
+
+select {
+	width: 150px;
+}
+
+.floatright {
+	float: none;
+}
+
+.buttondisplay {
+	text-align: center;
+}
+.buttondisplay input {
+	background-color: white;
+	border: 2px solid #b23d46;
+	color: #b23d46;
+	padding: 10px;
+	text-align: center;
+}
+.buttondisplay input:hover {
+	background-color:#b23d46;
+	color: white;
+}
+
+@media screen and (max-width: 800px) {
+	#formArea, #savedData {
+		width: 100%;
+	}
+}

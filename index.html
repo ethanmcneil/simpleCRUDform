@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simple Form</title>
+<link type="text/css" href="style.css" rel="stylesheet" >
+</head>
+<body>
+<div id="container">
+	<div id="info">
+  <h1>Simple HTML Form and Search</h1>
+  <p>This form is to help demonstrate a simple HTML form being used with Javascript and PHP to send information to a local database (in this case SQL) and retrieve previous entries.</p>
+  <p>To utilize the code in this package, I recommend you do the following:
+	  <ul>
+		  <li>Customize this HTML form to fit your needs</li>
+		  <li>Setup a database on your own server</li>
+		  <li>Customize the connection.php file to match your setup</li>
+	  </ul>
+	</p>
+			
+</div>
+    <div id="formArea">
+  <form>
+	<section  id="customerinfo">
+		<a name="customerInfo"></a>
+		<h3>Customer Information</h3>
+		<p>This is the form you can fill out and save to your local SQL database.</p>
+		<p>Customer ID: <span id="uniqueID"></span></p>
+		<p><span id="dateText">Date: </span><span id="dateView"></span></p>
+		<label for="name">Customer Name: </label><input name="name" id="name" type="text" placeholder="ex: John Doe"><br>
+		<label for="street">Street Address: </label><input name="street" id="street" type="text" placeholder="ex: 2411 River Rd"><br>
+		<label for="city">City: </label><input name="city" id="city" type="text" placeholder="Spencer"><br>
+		<label for="state">State: </label><input name="state" id="state" type="text" placeholder="IN"><br>
+		<label for="zip">Zip: </label><input name="zip" id="zip" type="text" placeholder="47460"><br>
+		<label for="phone">Best Phone Number: </label><input name="phone" id="phone" type="tel" placeholder="ex: 812-714-8250"><br>
+		<label for="email">Email Address: </label><input name="email" id="email" type="email" placeholder="ex: keithrealty@outlook.com"><br>
+	</section>
+	<div class="buttondisplay">
+	<section id="buttons">
+		<input type="button" onclick="submitCustomer()" value="Save Information"><input type="button" onclick="resetPage()" value="Reset Form"><input type="button" onclick="deleteCustomer()" value="Delete Customer">
+	</section>
+	</div>
+  </form>
+  </div>
+  <div id="savedData">
+	<h3>Search Feature:</h3>
+	<p>This uses PHP to request data from local SQL and store it as a Javascript array.</p>
+	<div><input type="text" id="searchMe" placeholder="ID or Name" /><input type="button" value="search" onclick="searchCustomers()"/></div>
+	<div id="searchResults" class="noshowbaby"></div>
+	<div id="hideButton"><input type='button' id='hideshow' value='Show Results' onclick='hideResults()' class="noshowbaby"/></div>
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
